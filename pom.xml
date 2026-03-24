@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>groupId</groupId>
+    <artifactId>LunTan</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>18</maven.compiler.source>
+        <maven.compiler.target>18</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+    </properties>
+    <!-- 依赖必须放在dependencies标签内 -->
+    <dependencies>
+        <!-- 第一个依赖：jBCrypt密码加密依赖 -->
+        <dependency>
+                <groupId>org.mindrot</groupId>
+                <artifactId>jbcrypt</artifactId> <!-- 改为小写jbcrypt -->
+                <version>0.4</version>
+        </dependency>
+        <!-- 2：FastJSON依赖，用于JSON格式处理 -->
+        <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>1.2.83</version> <!-- 1.2.83版本可根据需要调整，建议用较新稳定版 -->
+        </dependency>
+        <!-- 第三个依赖：Tomcat 10+ 需依赖JJakarta Servlet API -->
+        <dependency>
+                <groupId>jakarta.servlet</groupId>
+                <artifactId>jakarta.servlet-api</artifactId>
+                <version>5.0.0</version>
+                <scope>provided</scope>
+        </dependency>
+<!--        用于Java 对象和 JSON 数据之间的相互转换-->
+<!--        <dependency>-->
+<!--            <groupId>com.google.code.gson</groupId>-->
+<!--            <artifactId>gson</artifactId>-->
+<!--            <version>2.10.1</version> &lt;!&ndash; 版本号可根据需要调整 &ndash;&gt;-->
+<!--        </dependency>-->
+    </dependencies>
+<!--</project>-->
+
+</project>

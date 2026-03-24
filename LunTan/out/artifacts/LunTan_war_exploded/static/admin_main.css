@@ -1,0 +1,1372 @@
+
+
+/*!* 全局重置 *!*/
+/** {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    box-sizing: border-box;*/
+/*    font-family: 'Microsoft YaHei', sans-serif;*/
+/*}*/
+
+/*body {*/
+/*    background-color: #132142;*/
+/*    color: #333;*/
+/*}*/
+
+/*!* 顶部导航栏 *!*/
+/*.shang1 {*/
+/*    background-color: #132142;*/
+/*    color: white;*/
+/*    padding: 15px 20px;*/
+/*    text-align: center;*/
+/*    box-shadow: 0 2px 5px rgba(0,0,0,0.1);*/
+/*}*/
+
+/*!* 中间主容器 *!*/
+/*.zhong1 {*/
+/*    display: flex;*/
+/*    min-height: calc(100vh - 74px);*/
+/*    gap: 10px;*/
+/*    padding: 10px;*/
+/*}*/
+
+/*!* 左侧好友面板（恢复显示） *!*/
+/*.friend-panel {*/
+/*    width: 250px;*/
+/*    background-color: #132142;*/
+/*    color: #e2e8f0;*/
+/*    padding: 15px;*/
+/*    overflow-y: auto;*/
+/*    border-radius: 8px;*/
+/*    box-shadow: 0 0 10px rgba(0,0,0,0.2);*/
+/*    display: block; !* 恢复显示 *!*/
+/*}*/
+
+/*.search-friend {*/
+/*    flex: 1;*/
+/*    padding: 8px 10px;*/
+/*    border: none;*/
+/*    border-radius: 4px;*/
+/*    outline: none;*/
+/*}*/
+/*.search-friend {*/
+/*    flex: 1;*/
+/*    padding: 8px 10px;*/
+/*    border: 1px solid #334155;*/
+/*    border-radius: 4px;*/
+/*    outline: none;*/
+/*    background-color: #1e293b;*/
+/*    color: #e2e8f0;*/
+/*}*/
+
+/*.search-friend::placeholder {*/
+/*    color: #94a3b8;*/
+/*}*/
+
+/*.delete-friend-btn {*/
+/*    background-color: #ef4444; !* 管理员删除按钮强调色 *!*/
+/*    color: white;*/
+/*    border: none;*/
+/*    padding: 0 15px;*/
+/*    border-radius: 4px;*/
+/*    cursor: pointer;*/
+/*    transition: background-color 0.3s;*/
+/*    font-weight: 500;*/
+/*}*/
+
+/*.delete-friend-btn:hover {*/
+/*    background-color: #dc2626;*/
+/*}*/
+/* !*中间管理面板 *!*/
+/*.chat-panel {*/
+/*    flex: 1;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    background-color: white;*/
+/*    box-shadow: 0 0 15px rgba(0,0,0,0.3);*/
+/*    border-radius: 8px;*/
+/*    overflow: hidden;*/
+/*}*/
+
+/*!* 聊天头部 *!*/
+/*.chat-header {*/
+/*    padding: 15px 20px;*/
+/*    background-color: #3d7194;*/
+/*    color: white;*/
+/*}*/
+
+/*!* 消息列表（公共界面） *!*/
+/*.message-list {*/
+/*    flex: 1;*/
+/*    padding: 20px;*/
+/*    overflow-y: auto;*/
+/*    background-color: #f9f9f9;*/
+/*}*/
+
+/*!* 输入栏 *!*/
+/*.input-area {*/
+/*    display: flex;*/
+/*    gap: 10px;*/
+/*    padding: 15px 20px;*/
+/*    border-top: 1px solid #e1e1e1;*/
+/*}*/
+
+/*.message-input {*/
+/*    flex: 1;*/
+/*    padding: 10px 15px;*/
+/*    border: 1px solid #334155;*/
+/*    border-radius: 20px;*/
+/*    outline: none;*/
+/*    transition: border-color 0.3s;*/
+/*}*/
+
+/*.message-input:focus {*/
+/*    border-color: #3b82f6;*/
+/*}*/
+
+/*.send-btn {*/
+/*    background-color: #3b82f6;*/
+/*    color: white;*/
+/*    border: none;*/
+/*    padding: 0 20px;*/
+/*    border-radius: 20px;*/
+/*    cursor: pointer;*/
+/*    transition: background-color 0.3s;*/
+/*    font-weight: 500;*/
+/*}*/
+
+/*.send-btn:hover {*/
+/*    background-color: #2563eb;*/
+/*}*/
+
+/*!* 右侧功能栏 *!*/
+/*.right-panel {*/
+/*    width: 260px;*/
+/*    background-color: #132142;*/
+/*    color: #e2e8f0;*/
+/*    padding: 15px;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    gap: 10px;*/
+/*    border-radius: 8px;*/
+/*    box-shadow: 0 0 10px rgba(0,0,0,0.2);*/
+/*    position: sticky;*/
+/*    top: 10px;*/
+/*    height: fit-content;*/
+/*    max-height: calc(100vh - 40px);*/
+/*    overflow-y: auto;*/
+/*}*/
+
+/*!* 右侧用户信息 *!*/
+/*.user-info {*/
+/*    text-align: center;*/
+/*    padding: 15px 0;*/
+/*    border-bottom: 1px solid #334155;*/
+/*    margin-bottom: 10px;*/
+/*}*/
+
+/*.user-avatar {*/
+/*    width: 70px;*/
+/*    height: 70px;*/
+/*    border-radius: 50%;*/
+/*    background-color: #ef4444;*/
+/*    color: white;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    font-size: 28px;*/
+/*    margin: 0 auto 10px;*/
+/*    border: 2px solid #dc2626;*/
+/*}*/
+
+/*!* 右侧功能按钮 *!*/
+/*.right-panel .action-btn {*/
+/*    background-color: #132142;*/
+/*    color: #e2e8f0;*/
+/*    border: 1px solid #334155;*/
+/*    padding: 12px;*/
+/*    border-radius: 6px;*/
+/*    cursor: pointer;*/
+/*    text-align: left;*/
+/*    transition: all 0.3s;*/
+/*    font-size: 15px;*/
+/*}*/
+
+/*.right-panel .action-btn.active {*/
+/*    background-color: #ef4444;*/
+/*    border-color: #ef4444;*/
+/*    color: white;*/
+/*    font-size: 16px;*/
+/*    font-weight: bold;*/
+/*    transform: scale(1.02);*/
+/*}*/
+
+/*.right-panel .action-btn:disabled {*/
+/*    background-color: #132142;*/
+/*    border-color: #2d3748;*/
+/*    color: #64748b;*/
+/*    cursor: not-allowed;*/
+/*    opacity: 0.8;*/
+/*}*/
+
+/*!* 右侧输入框 *!*/
+/*#queryInput, #passwordInput {*/
+/*    width: 100%;*/
+/*    background-color: #132142;*/
+/*    border: 1px solid #334155;*/
+/*    color: #e2e8f0;*/
+/*    padding: 12px;*/
+/*    border-radius: 6px;*/
+/*}*/
+
+/*#queryInput:enabled {*/
+/*    background-color: white;*/
+/*    color: #333;*/
+/*    border: 1px solid #4CAF50;*/
+/*}*/
+
+/*#confirmBtn {*/
+/*    background-color: #22c55e;*/
+/*    color: white;*/
+/*    font-weight: 500;*/
+/*}*/
+
+/*#confirmBtn:hover {*/
+/*    background-color: #16a34a;*/
+/*}*/
+
+/*!* 查询用户页面 *!*/
+/*.search-user-page {*/
+/*    display: none;*/
+/*    flex: 1;*/
+/*    flex-direction: column;*/
+/*    padding: 20px;*/
+/*    background-color: white;*/
+/*    color: #333;*/
+/*}*/
+
+/*.search-user-input {*/
+/*    width: 100%;*/
+/*    padding: 10px 15px;*/
+/*    border: 1px solid #334155;*/
+/*    border-radius: 4px;*/
+/*    font-size: 16px;*/
+/*    color: #333;*/
+/*    margin-bottom: 20px;*/
+/*}*/
+
+/*.user-list {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    gap: 10px;*/
+/*    flex: 1;*/
+/*    overflow-y: auto;*/
+/*}*/
+
+/*.user-item {*/
+/*    padding: 10px 15px;*/
+/*    background-color: white;*/
+/*    border-radius: 4px;*/
+/*    border: 1px solid #334155;*/
+/*    cursor: pointer;*/
+/*    transition: background-color 0.3s;*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+/*}*/
+
+/*.user-item:hover {*/
+/*    background-color: #f5f5f5;*/
+/*}*/
+
+/*.delete-btn {*/
+/*    background-color: #ef4444;*/
+/*    color: white;*/
+/*    border: none;*/
+/*    padding: 5px 10px;*/
+/*    border-radius: 3px;*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*!* 用户详情页面 *!*/
+/*.user-detail-page {*/
+/*    display: none;*/
+/*    flex: 1;*/
+/*    flex-direction: column;*/
+/*    padding: 20px;*/
+/*    background-color: white;*/
+/*    color: #333;*/
+/*}*/
+
+/*.user-detail-header {*/
+/*    text-align: center;*/
+/*    margin-bottom: 20px;*/
+/*    padding-bottom: 15px;*/
+/*    border-bottom: 1px solid #334155;*/
+/*}*/
+
+/*.user-detail-avatar {*/
+/*    width: 80px;*/
+/*    height: 80px;*/
+/*    border-radius: 50%;*/
+/*    background-color: #66748a;*/
+/*    color: white;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    font-size: 32px;*/
+/*    margin: 0 auto 10px;*/
+/*    border: 2px solid black;*/
+/*}*/
+
+/*.user-detail-info {*/
+/*    margin-bottom: 10px;*/
+/*    font-size: 16px;*/
+/*    color: #333;*/
+/*}*/
+
+/*!* 标签栏 *!*/
+/*.user-detail-tabs {*/
+/*    display: flex;*/
+/*    gap: 10px;*/
+/*    margin-bottom: 20px;*/
+/*    flex-wrap: wrap;*/
+/*    border-bottom: 1px solid #334155;*/
+/*    padding-bottom: 5px;*/
+/*}*/
+
+/*.detail-tab {*/
+/*    padding: 8px 15px;*/
+/*    background-color: #f5f5f5;*/
+/*    border: 1px solid #334155;*/
+/*    border-radius: 4px 4px 0 0;*/
+/*    cursor: pointer;*/
+/*    transition: all 0.3s;*/
+/*}*/
+
+/*.detail-tab.active {*/
+/*    background-color: #597096;*/
+/*    border-color: black;*/
+/*    color: white;*/
+/*    font-weight: bold;*/
+/*    box-shadow: 0 2px 5px rgba(0,0,0,0.1);*/
+/*}*/
+
+/*!* 详情内容容器 *!*/
+/*.detail-content {*/
+/*    display: none;*/
+/*    padding: 15px;*/
+/*    border: 1px solid #334155;*/
+/*    border-radius: 6px;*/
+/*    margin-top: 10px;*/
+/*    max-height: 450px;*/
+/*    overflow-y: auto;*/
+/*    background-color: white;*/
+/*}*/
+
+/*.detail-content.active {*/
+/*    display: block !important;*/
+/*}*/
+
+/*!* 顶部统计栏 *!*/
+/*.top-bar {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    margin-bottom: 15px;*/
+/*}*/
+
+/*!* 行为数据条目 *!*/
+/*.action-item {*/
+/*    padding: 12px;*/
+/*    border-bottom: 1px solid #334155;*/
+/*    margin: 5px 0;*/
+/*    border-radius: 4px;*/
+/*    background-color: white;*/
+/*}*/
+
+/*.action-item-header {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    gap: 8px;*/
+/*    margin-bottom: 8px;*/
+/*}*/
+
+/*.content-text {*/
+/*    flex: 1;*/
+/*    font-size: 14px;*/
+/*}*/
+
+/*.action-item-time {*/
+/*    font-size: 12px;*/
+/*    color: #999;*/
+/*    margin-left: 24px;*/
+/*}*/
+
+/*.action-checkbox {*/
+/*    width: 16px;*/
+/*    height: 16px;*/
+/*    accent-color: #ef4444;*/
+/*    cursor: pointer;*/
+/*    display: none;*/
+/*}*/
+
+/*.delete-item-btn {*/
+/*    background-color: #ef4444;*/
+/*    color: white;*/
+/*    border: none;*/
+/*    padding: 4px 8px;*/
+/*    border-radius: 3px;*/
+/*    cursor: pointer;*/
+/*    font-size: 12px;*/
+/*    display: none;*/
+/*}*/
+
+/*.delete-item-btn:hover {*/
+/*    background-color: #dc2626;*/
+/*}*/
+
+/*!* 返回按钮 *!*/
+/*.back-btn {*/
+/*    color: #105472;*/
+/*    background-color: transparent;*/
+/*    border: 1px solid #105472;*/
+/*    padding: 8px 15px;*/
+/*    border-radius: 4px;*/
+/*    cursor: pointer;*/
+/*    margin-bottom: 20px;*/
+/*    width: fit-content;*/
+/*    transition: all 0.3s;*/
+/*}*/
+
+/*.back-btn:hover {*/
+/*    background-color: rgba(16, 84, 114, 0.1);*/
+/*}*/
+
+/*!* 弹窗样式 *!*/
+/*.modal {*/
+/*    display: none;*/
+/*    position: fixed;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    background-color: rgba(0,0,0,0.5);*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    z-index: 1000;*/
+/*}*/
+
+/*.modal-content {*/
+/*    background-color: #132142;*/
+/*    border-radius: 8px;*/
+/*    width: 90%;*/
+/*    max-width: 600px;*/
+/*    max-height: 80vh;*/
+/*    overflow-y: auto;*/
+/*    padding: 20px;*/
+/*    border: 1px solid #334155;*/
+/*    color: white;*/
+/*}*/
+
+/*.modal-title {*/
+/*    font-size: 18px;*/
+/*    font-weight: bold;*/
+/*    margin-bottom: 15px;*/
+/*    padding-bottom: 10px;*/
+/*    border-bottom: 1px solid #334155;*/
+/*}*/
+
+/*.modal-btn-group {*/
+/*    margin-top: 20px;*/
+/*    text-align: right;*/
+/*}*/
+
+/*.modal-btn {*/
+/*    padding: 8px 15px;*/
+/*    border-radius: 4px;*/
+/*    cursor: pointer;*/
+/*    border: none;*/
+/*    font-weight: 500;*/
+/*}*/
+
+/*.modal-close {*/
+/*    background-color: #3b82f6;*/
+/*    color: white;*/
+/*}*/
+
+/*!* 提示文本 *!*/
+/*.empty-tip {*/
+/*    text-align: center;*/
+/*    padding: 20px;*/
+/*    color: #999;*/
+/*    font-size: 14px;*/
+/*}*/
+
+/*.loading-tip {*/
+/*    text-align: center;*/
+/*    padding: 20px;*/
+/*    color: #666;*/
+/*    font-size: 14px;*/
+/*}*/
+
+/*!* 滚动条美化 *!*/
+/*::-webkit-scrollbar {*/
+/*    width: 8px;*/
+/*    height: 8px;*/
+/*}*/
+
+/*::-webkit-scrollbar-track {*/
+/*    background: #f1f1f1;*/
+/*    border-radius: 4px;*/
+/*}*/
+
+/*::-webkit-scrollbar-thumb {*/
+/*    background: #888;*/
+/*    border-radius: 4px;*/
+/*}*/
+
+/*::-webkit-scrollbar-thumb:hover {*/
+/*    background: #555;*/
+/*}*/
+
+/*!* ========== 新增：全选框/批量操作栏样式（解决显示冲突） ========== *!*/
+/*!* 1. 批量操作栏基础样式 *!*/
+/*.batch-actions {*/
+/*    display: flex !important; !* 强制显示，优先级最高 *!*/
+/*    align-items: center;*/
+/*    padding: 10px 0 !important;*/
+/*    margin-bottom: 10px;*/
+/*}*/
+
+/*!* 2. 全选框样式（强制显示+美化） *!*/
+/*.select-all-checkbox {*/
+/*    display: inline-block !important; !* 覆盖所有隐藏样式 *!*/
+/*    width: 16px !important;*/
+/*    height: 16px !important;*/
+/*    accent-color: #ef4444; !* 和行内复选框颜色统一 *!*/
+/*    margin-right: 8px !important;*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*!* 3. 批量删除按钮样式（统一风格） *!*/
+/*.batch-delete-btn {*/
+/*    display: inline-block !important; !* 强制显示 *!*/
+/*    margin-left: 10px !important;*/
+/*    padding: 4px 10px !important;*/
+/*    background-color: #ef4444 !important;*/
+/*    color: white !important;*/
+/*    border: none !important;*/
+/*    border-radius: 4px !important;*/
+/*    cursor: pointer !important;*/
+/*    font-size: 14px !important;*/
+/*}*/
+
+/*.batch-delete-btn:hover {*/
+/*    background-color: #dc2626 !important;*/
+/*}*/
+
+/*!* 4. 修复删除模式下的显示逻辑（和原有.delete-btn对齐） *!*/
+/*.state-delete-mode .select-all-checkbox,*/
+/*.state-delete-mode .batch-delete-btn,*/
+/*.state-delete-mode .action-checkbox,*/
+/*.state-delete-mode .delete-item-btn {*/
+/*    display: inline-block !important;*/
+/*}*/
+
+/*!* 5. 确保标签页激活时，批量操作栏跟着显示 *!*/
+/*.detail-content.active .batch-actions {*/
+/*    display: flex !important;*/
+/*}*/
+
+/*!* 动态生成的全选框强制显示 *!*/
+/*.state-delete-mode .select-all-checkbox {*/
+/*    display: inline-block !important;*/
+/*}*/
+/*.state-delete-mode .batch-actions {*/
+/*    display: flex !important;*/
+/*}*/
+/*.state-delete-mode .batch-delete-btn {*/
+/*    display: inline-block !important;*/
+/*}*/
+/* 先定义全局变量（放在样式最顶部） */
+:root {
+    /* 莫兰迪蓝色系 */
+    --morandi-blue: #bf6ca5;
+    --morandi-blue-dark: #a54a70;
+    --morandi-blue-light: #cf8b91;
+    --morandi-blue-pale: #D1E0F0;
+    /* 通用样式变量 */
+    --text-primary: #333333;
+    --radius-lg: 12px;
+    --radius-circle: 50%;
+    --shadow-soft: 0 4px 20px rgba(108, 142, 191, 0.1);
+    --shadow-medium: 0 6px 16px rgba(108, 142, 191, 0.2);
+    --shadow-strong: 0 8px 24px rgba(108, 142, 191, 0.3);
+/*}*/
+/*:root {*/
+    --blue-gradient: linear-gradient(135deg,
+    rgba(108, 142, 191, 0.08),
+    rgba(143, 168, 210, 0.05),
+    rgba(209, 224, 240, 0.03));
+
+}
+/* ========== 全局重置+对齐普通用户界面风格 ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Microsoft YaHei', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #F8F5F2 0%, #ffffff 50%, #ffffff 100%);
+    background-attachment: fixed;
+    color: #333;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+}
+
+/* ========== 顶部导航栏（对齐普通用户界面） ========== */
+.shang1 {
+    width: 100%;
+    height: 70px;
+    background: linear-gradient(135deg, #6C8EBF 0%, #4A6BA5 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(108, 142, 191, 0.2);
+}
+.shang1 h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 1px;
+}
+
+/* ========== 中间主容器（对齐普通用户界面布局） ========== */
+.zhong1 {
+    padding-top: 70px;
+    display: flex;
+    min-height: calc(100vh - 70px);
+    gap: 16px;
+    padding: 80px 20px 20px;
+    background: #c3d8e42e;
+}
+
+/* ========== 左侧好友面板（对齐普通用户界面） ========== */
+.friend-panel {
+    width: 280px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(108, 142, 191, 0.1);
+    padding: 16px;
+    overflow-y: auto;
+    display: block;
+}
+.search-friend {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #D1E0F0;
+    border-radius: 8px;
+    outline: none;
+    font-size: 13px;
+    color: #333;
+    margin-bottom: 12px;
+    background: #ffffff;
+}
+.search-friend::placeholder {
+    color: #94A3B8;
+}
+.delete-friend-btn {
+    width: 100%;
+    padding: 8px 0;
+    background: #FF6B6B;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+.delete-friend-btn:hover {
+    background: #FF5252;
+}
+
+/* ========== 中间管理面板（对齐普通用户聊天面板） ========== */
+.chat-panel {
+    flex: 1;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(108, 142, 191, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.chat-header {
+    padding: 16px 20px;
+    background: linear-gradient(135deg, #6C8EBF 0%, #4A6BA5 100%);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#exitChatBtn {
+    background: rgba(255,255,255,0.2);
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+}
+.message-list {
+    border: 2px #d4d4d4 solid;
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background: #ffffff;
+}
+.input-area {
+    display: flex;
+    gap: 10px;
+    padding: 16px 20px;
+    border-top: 1px solid #D1E0F0;
+    background: white;
+}
+.message-input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid #D1E0F0;
+    border-radius: 20px;
+    outline: none;
+    font-size: 14px;
+    color: #333;
+    background: #ffffff;
+}
+.message-input:focus {
+    border-color: #6C8EBF;
+}
+.send-btn {
+    padding: 12px 24px;
+    background: #6C8EBF;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+.send-btn:hover {
+    background: #4A6BA5;
+}
+
+/* ========== 右侧功能栏（对齐普通用户右侧面板） ========== */
+/*.right-panel .action-btn {*/
+/*    padding: 16px 18px;*/
+/*    background: transparent;*/
+/*    color: var(--text-primary);*/
+/*    cursor: pointer;*/
+/*    border: none;*/
+/*    border-bottom: 1px solid rgba(108, 142, 191, 0.15);*/
+/*    text-align: center;*/
+/*    transition: all 0.3s ease;*/
+/*    font-size: 13px;*/
+/*    font-weight: 600;*/
+/*    position: relative;*/
+/*    overflow: hidden;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    gap: 10px;*/
+/*}*/
+/*.right-panel {*/
+/*    width: 260px;*/
+/*    background: white;*/
+/*    border-radius: 12px;*/
+/*    box-shadow: 0 4px 20px rgba(108, 142, 191, 0.1);*/
+/*    padding: 16px;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    gap: 12px;*/
+/*    position: sticky;*/
+/*    top: 80px;*/
+/*    height: fit-content;*/
+/*    max-height: calc(100vh - 100px);*/
+/*    overflow-y: auto;*/
+/*}*/
+
+/*.user-info {*/
+/*    padding: 24px 16px;*/
+/*    border-bottom: 1px solid rgba(108, 142, 191, 0.2);*/
+/*    text-align: center;*/
+/*    background: linear-gradient(135deg, rgba(108, 142, 191, 0.08), rgba(209, 224, 240, 0.04));*/
+/*    position: relative;*/
+/*    overflow: hidden;*/
+/*}*/
+/*!*.user-info {*!*/
+/*!*    text-align: center;*!*/
+/*!*    padding: 16px 0;*!*/
+/*!*    border-bottom: 1px solid #D1E0F0;*!*/
+/*!*    margin-bottom: 8px;*!*/
+/*!*}*!*/
+/*.user-avatar {*/
+/*    width: 70px;*/
+/*    height: 70px;*/
+/*    border-radius: 50%;*/
+/*    background: linear-gradient(135deg, #6C8EBF 0%, #4A6BA5 100%);*/
+/*    color: white;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    font-size: 28px;*/
+/*    margin: 0 auto 10px;*/
+/*    border: 2px solid white;*/
+/*    box-shadow: 0 4px 10px rgba(108, 142, 191, 0.2);*/
+/*}*/
+/*!* 管理员 *!*/
+/*.user-avatar {*/
+/*    width: 70px; !* 宽度减小 *!*/
+/*    height: 70px; !* 高度减小 *!*/
+/*    border-radius: var(--radius-circle);*/
+/*    background: linear-gradient(135deg, var(--morandi-blue), var(--morandi-blue-dark));*/
+/*    margin: 0 auto 12px; !* 下边距减小 *!*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    overflow: hidden;*/
+/*    color: white;*/
+/*    font-weight: 700;*/
+/*    font-size: 22px; !* 字体缩小 *!*/
+/*    border: 3px solid rgba(255, 255, 255, 0.95);*/
+/*    box-shadow: var(--shadow-medium);*/
+/*    transition: all 0.3s ease;*/
+/*    position: relative;*/
+/*}*/
+/*.user-info div {*/
+/*    font-size: 13px;*/
+/*    color: #666;*/
+/*    margin: 4px 0;*/
+/*}*/
+/*!*#queryInput, #passwordInput {*!*/
+/*!*     width: 100%;*!*/
+/*!*     padding: 12px 16px;*!*/
+/*!*     border: 1px solid #D1E0F0;*!*/
+/*!*     border-radius: 8px;*!*/
+/*!*     outline: none;*!*/
+/*!*     font-size: 14px;*!*/
+/*!*     color: #333;*!*/
+/*!*     background: #F8F5F2;*!*/
+/*!* }*!*/
+/*.action-btn {*/
+/*    width: 100%;*/
+/*    padding: 12px 16px;*/
+/*    background: #F8F5F2;*/
+/*    border: none;*/
+/*    border-radius: 8px;*/
+/*    font-size: 14px;*/
+/*    color: #333;*/
+/*    cursor: pointer;*/
+/*    transition: background 0.3s;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    text-align: center;*/
+/*}*/
+/*.action-btn:hover {*/
+/*    background: #D1E0F0;*/
+/*}*/
+/*.action-btn.active {*/
+/*    background: #FF6B6B;*/
+/*    color: white;*/
+/*}*/
+
+/*#queryInput:enabled {*/
+/*    border-color: #4A6BA5;*/
+/*}*/
+/*#confirmBtn {*/
+/*    width: 100%;*/
+/*    padding: 12px 0;*/
+/*    background: #22c55e;*/
+/*    color: white;*/
+/*    border: none;*/
+/*    border-radius: 10px;*/
+/*    cursor: pointer;*/
+/*    font-size: 14px;*/
+/*    font-weight: 600;*/
+/*}*/
+/*#confirmBtn:hover {*/
+/*    background: #16a34a;*/
+/*}*/
+
+
+
+
+/* ========== 右侧功能栏 - 增强蓝色元素 ========== */
+.right-panel {
+    width: 225px;
+    background: linear-gradient(to bottom,
+    rgba(255, 255, 255, 0.95),
+    rgba(209, 224, 240, 0.08));
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-left: 1px solid rgba(108, 142, 191, 0.2);
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+    border-radius: var(--radius-lg) 0 0 var(--radius-lg);
+    animation: slideInRight 0.6s ease-out 0.3s both;
+    border-right: 4px solid var(--morandi-blue-pale);
+    position: sticky;
+    top: 80px;
+    height: fit-content;
+    max-height: calc(100vh - 100px);
+    padding: 0 !important; /* 重置原有padding，统一样式 */
+}
+
+/* 右侧栏滑入动画 */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* 用户信息区域 */
+.user-info {
+    padding: 24px 16px;
+    border-bottom: 1px solid rgba(108, 142, 191, 0.2);
+    text-align: center;
+    background: linear-gradient(135deg,
+    rgba(108, 142, 191, 0.08),
+    rgba(209, 224, 240, 0.04));
+    position: relative;
+    overflow: hidden;
+    margin: 0 !important; /* 重置原有margin */
+}
+
+/* 用户头像 - 蓝色主题+悬浮动效 */
+.user-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: var(--radius-circle);
+    background-color: #b64e4e;
+    margin: 0 auto 12px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: white;
+    font-weight: 700;
+    font-size: 22px;
+    border: 3px solid rgba(255, 255, 255, 0.95);
+    box-shadow: var(--shadow-medium);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* 头像悬浮效果 */
+.user-avatar:hover {
+    transform: scale(1.1) rotate(10deg);
+    box-shadow: var(--shadow-strong);
+    background: linear-gradient(135deg, var(--morandi-blue-light), var(--morandi-blue));
+}
+
+/* 头像高光动画 */
+.user-avatar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-circle);
+    background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.3) 50%, transparent 70%);
+    animation: shine 3s infinite linear;
+}
+
+/* 高光动画 */
+@keyframes shine {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.user-info div {
+    font-size: 13px;
+    color: var(--text-primary);
+    margin: 4px 0;
+    opacity: 0.8;
+}
+
+/* 功能按钮 - 统一样式+悬浮动效 */
+.right-panel .action-btn {
+    width: 100%;
+    padding: 19px 18px;
+    background: transparent;
+    color: var(--text-primary);
+    cursor: pointer;
+    border: none;
+    border-bottom: 1px solid rgba(108, 142, 191, 0.15);
+    text-align: left;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 0 !important; /* 重置原有圆角 */
+    margin: 0 !important; /* 重置原有margin */
+}
+
+/* 按钮悬浮效果 */
+.right-panel .action-btn:hover {
+    background: linear-gradient(90deg,
+    rgba(108, 142, 191, 0.08),
+    transparent);
+    transform: translateX(6px);
+    padding-left: 24px;
+    color: var(--morandi-blue-dark);
+}
+
+/* 按钮激活状态 */
+.right-panel .action-btn.active {
+    background-color: #c05757;
+    color: #000000;
+    font-weight: 700;
+}
+
+/* 按钮右侧图标/箭头样式（如果有） */
+.right-panel .action-btn::after {
+    content: '>'; /* 默认箭头，可根据实际替换为图标 */
+    margin-left: auto;
+    opacity: 0.6;
+    font-size: 13px;
+    transition: all 0.2s ease;
+    color: var(--morandi-blue);
+}
+
+.right-panel .action-btn:hover::after {
+    opacity: 1;
+    transform: scale(1.2);
+    color: var(--morandi-blue-dark);
+}
+
+/* 管理员输入框样式 */
+#queryInput, #passwordInput {
+    width: 100%;
+    margin: 8px auto;
+    padding: 12px 16px;
+    border: 1px solid rgba(108, 142, 191, 0.2);
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+    display: block;
+}
+
+#queryInput:focus, #passwordInput:focus {
+    border-color: var(--morandi-blue);
+    box-shadow: 0 0 0 2px rgba(108, 142, 191, 0.1);
+    background: white;
+}
+
+#queryInput:enabled {
+    border-color: var(--morandi-blue);
+}
+
+/* 确认按钮样式 */
+#confirmBtn {
+    text-align: center;
+    width: 90%;
+    margin: 8px auto 16px;
+    padding: 12px 0;
+    background: linear-gradient(135deg, var(--morandi-blue), var(--morandi-blue-dark));
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: block;
+    box-shadow: 0 2px 8px rgba(108, 142, 191, 0.2);
+}
+
+#confirmBtn:hover {
+    background: linear-gradient(135deg, var(--morandi-blue-light), var(--morandi-blue));
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(108, 142, 191, 0.3);
+}
+
+#confirmBtn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(108, 142, 191, 0.2);
+}
+
+
+
+/* ========== 查询用户页面（对齐普通用户界面） ========== */
+.search-user-page {
+    display: none;
+    flex: 1;
+    flex-direction: column;
+    padding: 20px;
+    background: white;
+}
+.back-btn {
+    padding: 8px 16px;
+    background: #ffffff;
+    border: 1px solid #D1E0F0;
+    border-radius: 8px;
+    color: #6C8EBF;
+    cursor: pointer;
+    font-size: 13px;
+    margin-bottom: 20px;
+    width: fit-content;
+}
+.back-btn:hover {
+    background: #D1E0F0;
+}
+.search-user-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #D1E0F0;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    color: #333;
+    background: #ffffff;
+    margin-bottom: 20px;
+}
+.user-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+    overflow-y: auto;
+}
+.user-item {
+    padding: 12px 16px;
+    background: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #D1E0F0;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.user-item:hover {
+    background: #D1E0F0;
+}
+.delete-btn {
+    padding: 6px 12px;
+    background: #FF6B6B;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+/* ========== 用户详情页面（对齐普通用户界面） ========== */
+.user-detail-page {
+    display: none;
+    flex: 1;
+    flex-direction: column;
+    padding: 20px;
+    background: white;
+}
+.user-detail-header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #D1E0F0;
+}
+.user-detail-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6C8EBF 0%, #4A6BA5 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    margin: 0 auto 10px;
+    border: 2px solid white;
+    box-shadow: 0 4px 10px rgba(108, 142, 191, 0.2);
+}
+.user-detail-info {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #333;
+}
+.user-detail-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+.detail-tab {
+    padding: 8px 16px;
+    background: #ffffff;
+    border: 1px solid #D1E0F0;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+}
+.detail-tab.active {
+    background: #6C8EBF;
+    color: white;
+    border-color: #6C8EBF;
+}
+.detail-content {
+    display: none;
+    padding: 16px;
+    border: 1px solid #D1E0F0;
+    border-radius: 8px;
+    margin-top: 10px;
+    max-height: 450px;
+    overflow-y: auto;
+    background: #ffffff;
+}
+.detail-content.active {
+    display: block;
+}
+.action-item {
+    padding: 12px;
+    border-bottom: 1px solid #D1E0F0;
+    margin: 5px 0;
+    border-radius: 8px;
+    background: white;
+}
+.action-checkbox {
+    width: 16px;
+    height: 16px;
+    accent-color: #FF6B6B;
+    cursor: pointer;
+    margin-right: 8px;
+}
+.delete-item-btn {
+    background: #FF6B6B;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    margin-left: 8px;
+}
+
+/* ========== 弹窗样式（对齐普通用户界面） ========== */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+.modal-content {
+    background: white;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 24px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+.modal-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #D1E0F0;
+    color: #4A6BA5;
+}
+.modal-btn-group {
+    margin-top: 20px;
+    text-align: right;
+}
+.modal-btn {
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    font-size: 14px;
+}
+.modal-close {
+    background: #6C8EBF;
+    color: white;
+}
+
+/* ========== 滚动条美化（对齐普通用户界面） ========== */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #F8F5F2;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb {
+    background: #D1E0F0;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #A5C1E3;
+}
+
+/* ========== 管理员专属：批量操作栏（保留功能+对齐风格） ========== */
+.batch-actions {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    margin-bottom: 10px;
+}
+.select-all-checkbox {
+    width: 16px;
+    height: 16px;
+    accent-color: #FF6B6B;
+    margin-right: 8px;
+}
+.batch-delete-btn {
+    padding: 8px 16px;
+    background: #FF6B6B;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    margin-left: 10px;
+}

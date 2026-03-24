@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+<!--    <servlet>-->
+<!--        <servlet-name>FS</servlet-name>-->
+<!--        <servlet-class>com.luntan.software.FServlet</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>FS</servlet-name>-->
+<!--        <url-pattern>/lun</url-pattern>-->
+<!--    </servlet-mapping>-->
+
+    <!-- 登录Servlet配置 -->
+<!--    <servlet>-->
+<!--        <servlet-name>LoginServlet</servlet-name>-->
+<!--        <servlet-class>com.luntan.software.servlet.LoginServlet</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>LoginServlet</servlet-name>-->
+<!--        <url-pattern>/pages/login</url-pattern> &lt;!&ndash; 需与login.jsp中form的action一致 &ndash;&gt;-->
+<!--  S  </servlet-mapping>-->
+
+    <!-- 注册Servlet配置 -->
+<!--    <servlet>-->
+<!--        <servlet-name>RegisterServlet</servlet-name>-->
+<!--        <servlet-class>com.luntan.software.servlet.RegisterServlet</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>RegisterServlet</servlet-name>-->
+<!--        <url-pattern>/RegisterServlet</url-pattern> &lt;!&ndash; 注册路径 &ndash;&gt;-->
+<!--    </servlet-mapping>-->
+
+    <!-- 主页Servlet配置 -->
+<!--    <servlet>-->
+<!--        <servlet-name>MainPagesServlet</servlet-name>-->
+<!--        <servlet-class>com.luntan.software.servlet.MainPagesServlet</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>MainPagesServlet</servlet-name>-->
+<!--        <url-pattern>/MainPagesServlet</url-pattern> &lt;!&ndash; 主页路径 &ndash;&gt;-->
+<!--    </servlet-mapping>-->
+
+    <!-- AdminSearchUserServlet配置 -->
+<!--    <servlet>-->
+<!--        <servlet-name>AdminSearchUserServlet</servlet-name>-->
+<!--        <servlet-class>com.luntan.software.servlet.AdminSearchUserServlet</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>AdminSearchUserServlet</servlet-name>-->
+<!--        <url-pattern>/AdminSearchUserServlet</url-pattern>-->
+<!--    </servlet-mapping>-->
+
+    <!-- 主AdminDeleteServlet配置 -->
+    <!-- web.xml中的重复配置 -->
+<!--    <servlet>-->
+<!--        <servlet-name>AdminDeleteServlet</servlet-name>-->
+<!--        <servlet-class>com.luntan.software.servlet.AdminDeleteServlet</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>AdminDeleteServlet</servlet-name>-->
+<!--        <url-pattern>/AdminDeleteServlet</url-pattern>-->
+<!--    </servlet-mapping>-->
+
+</web-app>
