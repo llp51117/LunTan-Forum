@@ -29,5 +29,5 @@
 ---
 
 ## 📚 补充文档（可选）
-- [数据库设计文档](./docs/DATABASE.md)
 - [部署操作手册](./docs/DEPLOY.md)
+- [数据库设计文档](./docs/DATABASE.md)
