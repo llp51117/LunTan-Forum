@@ -37,7 +37,7 @@ Tomcat 10+ 包名变化，需手动添加依赖：
 
 ### 2. 修改数据库连接密码
 打开 `src/main/java/com/luntan/software/DatabaseUtil.java`，修改以下两处：
-```java
+
 // 1. 数据库密码（替换为你的 MySQL 登录密码）
 private static final String PASSWORD = "你的MySQL密码";
 
@@ -48,34 +48,43 @@ private static final String URL = "jdbc:mysql://localhost:3306/luntan_db?useUnic
 // 方式2：局域网访问（小组开发用，替换为你的电脑IP）
 // private static final String URL = "jdbc:mysql://192.168.xxx.xxx:3306/luntan_db?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false";
 
-3. 局域网访问配置（小组开发）
-放行 8080 端口：Win+R 输入 cmd，执行 netstat -ano | findstr 8080，确保 Tomcat 8080 端口已放行
-修改 Tomcat 配置：
-打开 Tomcat/conf/server.xml，找到 8080 端口配置，添加 address="0.0.0.0"：
-xml
-<Connector port="8080" protocol="HTTP/1.1"
-           connectionTimeout="20000"
-           redirectPort="8443" 
-           address="0.0.0.0"/>
-重启 Tomcat 生效
-🚀 第三步：Tomcat 配置与运行
-1. 配置 Tomcat 10.0.23
-IDEA 右上角点击 Add Configuration → + → Tomcat Server → Local
-选择你的 Tomcat 10.0.23 安装目录
-切换到 Deployment 标签，点击 + → Artifact，选择你的论坛项目
-点击 Apply → OK 保存
-2. 启动项目
-点击 IDEA 右上角 Tomcat 的 运行按钮 ▶️
-等待启动完成，无报错即成功
-访问地址：
-本地：http://localhost:8080/LunTan
-局域网：http://你的电脑IP:8080/LunTan（小组成员需连同一 WiFi）
-❌ 常见问题解决
-Tomcat 版本爆红：必须用 10.0.23，其他版本会报错
-数据库连接失败：检查 URL、用户名、密码是否正确，MySQL 服务是否启动
-局域网无法访问：检查电脑 IP、8080 端口是否放行、server.xml 是否配置 address="0.0.0.0"
-Maven 依赖下载慢：切换到阿里云镜像，重启 IDEA 后重试
-👥 小组开发注意事项
-所有成员统一使用 Tomcat 10.0.23 + JDK 1.8，避免环境不一致
-数据库由一人部署，其他人通过局域网 IP 访问
-初始管理员账号：用户名：管理员，密码：741852，建议使用后修改
+### 3. 局域网访问配置（小组开发）
+1. 放行 8080 端口：Win+R 输入 cmd，执行 netstat -ano | findstr 8080，确保 Tomcat 8080 端口已放行
+2. 修改 Tomcat 配置：
+   打开 Tomcat/conf/server.xml，找到 8080 端口配置，添加 address="0.0.0.0"：
+   <Connector port="8080" protocol="HTTP/1.1"
+              connectionTimeout="20000"
+              redirectPort="8443" 
+              address="0.0.0.0"/>
+3. 重启 Tomcat 生效
+
+---
+
+## 🚀 第三步：Tomcat 配置与运行
+### 1. 配置 Tomcat 10.0.23
+1. IDEA 右上角点击 **Add Configuration → + → Tomcat Server → Local**
+2. 选择你的 Tomcat 10.0.23 安装目录
+3. 切换到 `部署` 标签，点击 **+ → Artifact**，选择你的论坛项目
+4. 点击 `Apply → OK` 保存
+
+### 2. 启动项目
+- 点击 IDEA 右上角 Tomcat 的 **运行按钮 ▶️**
+- 等待启动完成，无报错即成功
+- 访问地址：
+  - 本地：`http://localhost:8080/LunTan`
+  - 局域网：`http://你的电脑IP:8080/LunTan`（小组成员需连同一 WiFi）
+
+---
+
+## ❌ 常见问题解决
+1. **Tomcat 版本爆红**：必须用 10.0.23，其他版本会报错
+2. **数据库连接失败**：检查 URL、用户名、密码是否正确，MySQL 服务是否启动
+3. **局域网无法访问**：检查电脑 IP、8080 端口是否放行、`server.xml` 是否配置 `address="0.0.0.0"`
+4. **Maven 依赖下载慢**：切换到阿里云镜像，重启 IDEA 后重试
+
+---
+
+## 👥 小组开发注意事项
+- 所有成员统一使用 **Tomcat 10.0.23 + JDK 1.8**，避免环境不一致
+- 数据库由一人部署，其他人通过局域网 IP 访问
+- 初始管理员账号：`用户名：管理员`，`密码：741852`，建议使用后修改
